@@ -3,4 +3,7 @@
 
 # bcra-api
 Project that gather information from BCRA API
-
+Stack:
+ - Python
+ - InfluxDB
+ - Grafana
