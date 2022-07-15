@@ -5,5 +5,5 @@
 Project that gather information from BCRA API
 Stack:
  - Python
- - InfluxDB
+ - Prometheus
  - Grafana
