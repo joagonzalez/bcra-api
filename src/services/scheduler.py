@@ -1,6 +1,6 @@
 import time
 import schedule
-from asyncio.log import logger
+from src.services.loggerService import logger
 
 
 class Scheduler():
@@ -17,11 +17,11 @@ class Scheduler():
     def job_status(self, job_name=None):
         pass
 
-
     def event_loop(self):
         while True:
             self.scheduler.run_pending()
             time.sleep(1)
+
 
 if __name__ == "__main__":
     pass

@@ -1,5 +1,6 @@
 import requests
 from src.config.settings import config
+from src.services.monitoring import monitor
 from src.services.loggerService import logger
 
 class BCRA:
