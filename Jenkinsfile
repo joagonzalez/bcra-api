@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             when {
                 // Only execute build stage on master branch
-                expression { env.GIT_BRANCH == 'origin/develop' }
+                expression { env.GIT_BRANCH == 'origin/master' }
             }
             steps {
                 echo 'Building stage..'
@@ -25,7 +25,7 @@ pipeline {
         stage('Deploy') {
             when {
                 // Only execute deploy stage on master branch
-                expression { env.GIT_BRANCH == 'origin/develop' }
+                expression { env.GIT_BRANCH == 'origin/master' }
             }
             steps {
                 echo 'Deploying stage..'
