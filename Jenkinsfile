@@ -1,16 +1,22 @@
 pipeline {
     agent any
 
+    environment {
+            DISABLE_AUTH = 'true'
+            DB_ENGINE    = 'sqlite'
+        }
+
     stages {
         stage('Test') {
             steps {
                 echo 'Testing stage..'
+                sh 'printenv'
             }
         }
         stage('Build') {
             when {
-                // Only say hello if a "greeting" is requested
-                expression { env.BRANCH_NAME == 'master' }
+                // Only execute build stage on master branch
+                expression { env.GIT_BRANCH == 'origin/master' }
             }
             steps {
                 echo 'Building stage..'
@@ -18,8 +24,8 @@ pipeline {
         }
         stage('Deploy') {
             when {
-                // Only say hello if a "greeting" is requested
-                expression { env.BRANCH_NAME == 'master' }
+                // Only execute deploy stage on master branch
+                expression { env.GIT_BRANCH == 'origin/master' }
             }
             steps {
                 echo 'Deploying stage..'
