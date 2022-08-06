@@ -2,13 +2,13 @@
 ![Python](https://img.shields.io/badge/platform-linux--64%7Cwin--64-lightgrey)
 
 # bcra-api
-Project that gather information from BCRA API
+Project that gathers information from BCRA API
 Stack:
  - Python
  - Prometheus
  - Grafana
 
-# query BCRA API
+### query BCRA API
 
 ```bash
 curl https://api.estadisticasbcra.com/usd -H "Accept: application/json" -H "Authorization: Bearer {token}"
