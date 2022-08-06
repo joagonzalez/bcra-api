@@ -8,6 +8,9 @@ Stack:
  - Prometheus
  - Grafana
 
+<img src="doc/diagram.png" />
+
+
 ### query BCRA API
 
 ```bash
