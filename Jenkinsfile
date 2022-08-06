@@ -17,6 +17,10 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                // Only say hello if a "greeting" is requested
+                expression { env.BRANCH_NAME == 'master' }
+            }
             steps {
                 echo 'Deploying stage..'
             }
